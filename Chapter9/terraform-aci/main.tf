@@ -2,6 +2,7 @@ resource "azurerm_resource_group" "acidemobookken" {
   name     = "acidemobookken"
   location = "eastus"
 }
+
 resource "azurerm_container_group" "aci-app-demobook" {
   name                = "aci-app-demobook"
   location            = azurerm_resource_group.acidemobookken.location
