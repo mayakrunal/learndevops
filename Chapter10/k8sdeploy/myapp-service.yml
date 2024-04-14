@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp
+spec:
+  selector:
+    app: webapp
+  type: NodePort
+  ports:
+    - name: default
+      port: 80
+      targetPort: 80
+      nodePort: 31000
